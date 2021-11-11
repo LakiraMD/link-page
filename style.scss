@@ -1,20 +1,27 @@
-$background-color:#222;
-$background-color2:#333;
-$primary-color:#bbb;
-$primay-color-2:#fff;
 
+// .dark{
+  //   $bg: $bg-dark;
+  //   $fg: $fg-dark;
+  //   background: $bg;
+  //   // background: red;
+// }
+$bg:#222;
+$fg:#fff;
+$fg-dark:#fff;
+$color-1:#0ff;
+$color-2:#f0f;
 body {
   width: 100vw;
-  background: $background-color;
+  background: $bg;
   a {
     text-decoration: none;
-    color: black;
     &:visited {
       text-decoration: none;
     }
   }
 }
 .container {
+  
   margin: auto;
   .img-box{
     display: flex;
@@ -30,40 +37,44 @@ body {
   h3{
     text-align: center;
     margin: 50px;
-    color: $primay-color-2;
+    color:$fg;
   }
 
   .links {
     .link {
       margin: auto;
       width: 80%;
-      color:$primary-color;
+      color:$fg;
       height: 50px;
       margin-top: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 2px solid black;
-      border-radius: 20px;
       max-width: 500px;
       transition: 0.05s;
       font-size: 20px;
+      border: double 4px transparent;
+      border-radius: 30px;
+      background-image: linear-gradient($bg), radial-gradient(circle at top left, $color-1,$color-2);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      i{
+        margin-right: 30px;
+      }
       &:hover{
-        background-color: white;
-        color: black;
-        box-shadow:0 0 5px 8px #0ff;
+        background-image:linear-gradient(90deg, $color-1,$color-2), radial-gradient(circle at top left,  $color-1,$color-2) ;
+        color: $bg;
+        box-shadow:0 0 5px 8px $color-1;
         font-weight: bold;
+        transform: scale(1.05);
         i{
           transform: scale(1.2);
         }
-      }
-      i{
-        margin-right: 30px;
       }
     }
   }
 }
 footer{
   text-align: center;
-  color: $primay-color-2;
+  color: $fg;
 }
