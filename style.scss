@@ -13,6 +13,9 @@ $color-2:#f0f;
 body {
   width: 100vw;
   background: $bg;
+  *{
+    margin: 0%;
+  }
   a {
     text-decoration: none;
     &:visited {
@@ -43,14 +46,13 @@ body {
   .links {
     .link {
       margin: auto;
-      width: 80%;
+      width: 500px;
       color:$fg;
       height: 50px;
       margin-top: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      max-width: 500px;
       transition: 0.05s;
       font-size: 20px;
       border: double 4px transparent;
@@ -74,7 +76,28 @@ body {
     }
   }
 }
+.code{
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  i{
+    font-size: 100px;
+    color: white;
+    display: block;
+    transition: 0.7s;
+    &:hover{
+      transform: rotate(360deg);
+    }
+  }
+}
 footer{
-  text-align: center;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: $fg;
 }
