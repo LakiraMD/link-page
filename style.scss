@@ -44,9 +44,10 @@ body {
   }
 
   .links {
+
+    margin: auto;
+    width: 300px;
     .link {
-      margin: auto;
-      width: 500px;
       color:$fg;
       height: 50px;
       margin-top: 10px;
@@ -78,14 +79,14 @@ body {
 }
 .code{
   position: fixed;
-  bottom: 0;
-  right: 20px;
+  bottom: 20px;
+  right: 30px;
   padding: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
   i{
-    font-size: 100px;
+    font-size: 50px;
     color: white;
     display: block;
     transition: 0.7s;
